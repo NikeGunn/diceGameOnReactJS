@@ -5,7 +5,8 @@ import { Link } from "@chakra-ui/layout";
 import { List } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
-import { background } from "@chakra-ui/react";
+import {FaFacebook, FaYoutube} from 'react-icons/fa';
+import './style.css'
 
 import { useState } from "react";
 const App = () => {
@@ -57,7 +58,7 @@ const App = () => {
               fontSize="6xl"
               mb="8"
             >
-              {error ? error : "Select Number"}
+              {error ? error : "Select Any Number"}
             </Heading>
             <Flex pb="10">
               {numbers.map((value) => (
@@ -96,7 +97,7 @@ const App = () => {
             <Text fontSize="6xl" fontWeight="bold">
               Total Score
             </Text>
-            <Button colorScheme='blue' coloonClick={() => setScore(0)}>Reset Score</Button>
+            <Button colorScheme='blue' size='lg' onClick={() => setScore(0)}>Reset Score</Button>
           </Stack>
           <Stack maxW="900px" mx="auto">
             <Heading as="h2">Game Rules:-</Heading>
@@ -112,18 +113,21 @@ const App = () => {
               </ListItem>
               <p>YouTube Chennel | CodeWithNikhil |</p>
               <ListItem>
-                <Link href="https://www.youtube.com/c/CodeWithNikhil/featured">
-                  Join YouTube channel
+              <Button colorScheme='red' size='lg' leftIcon={<FaYoutube />}>
+              <Link href="https://www.youtube.com/codewithnikhil/" target='__blank'>
+                  YouTube
                 </Link>
+                  </Button>
               </ListItem>
               <ListItem>
                 <p>Facebook | Nikhil Bhagat |</p> 
-                <Link href="https://www.facebook.com/knewboy.nykhil/">
+               <Button colorScheme='messenger' size='lg' leftIcon={<FaFacebook />}>
+              <Link href="https://www.facebook.com/knewboy.nykhil/" target='__blank'>
                   Facebook
                 </Link>
-
-              </ListItem>
-              <ListItem>
+                  </Button>
+                </ListItem>
+            <ListItem>
               &copy; CodeWithNikhil
               </ListItem>
             </List>
