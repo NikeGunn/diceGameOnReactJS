@@ -151,6 +151,8 @@ const App = () => {
               Start Game
             </Button>
           </Stack>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8481534559460325"
+                  crossorigin="anonymous"></script>
         </Flex>
       )}
     </>
